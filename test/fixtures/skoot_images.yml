@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: 
+  height: 1
+  width: 1
+  skoot_id: 
+
+two:
+  image: 
+  height: 1
+  width: 1
+  skoot_id: 

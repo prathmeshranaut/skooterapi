@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hashed_id: MyString
+  access_token: MyString
+  name: MyString
+  email: MyString
+  deleted_moderator: false
+  deleted_auto: false
+
+two:
+  hashed_id: MyString
+  access_token: MyString
+  name: MyString
+  email: MyString
+  deleted_moderator: false
+  deleted_auto: false

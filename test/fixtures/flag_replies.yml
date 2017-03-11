@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reply_id: 
+  user_id: 
+  flag_id: 
+  accepted: false
+
+two:
+  reply_id: 
+  user_id: 
+  flag_id: 
+  accepted: false

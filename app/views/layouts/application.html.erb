@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Skooter</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+
+		<% if admin_signed_in? %>
+			<ul>
+				<li> Logged in as <%= current_admin.email %> </li>
+				<li> <%= link_to "Logout", destroy_admin_session_path, method: :delete %> </li>
+				<br>
+				<li><%= link_to 'Moderation', admin_moderator_path %></li>
+				<li><%= link_to 'Analytics', admin_analytics_path %></li>
+				<li><%= link_to 'Content', admin_content_path %></li>
+			</ul>
+		<% else %>
+			<ul>
+			    <li><%= link_to "Login", new_admin_session_path %></li>
+			</ul>
+		<% end %>
+		<% if flash[:alert] %>
+		    <p class="flash-error"><%= flash[:alert] %></p>
+		  <% end %>
+		  <% if flash[:notice] %>
+		    <p class="flash-notice"><%= flash[:notice] %></p>
+		  <% end %>
+		  <hr>
+		<%= yield %>
+
+	</body>
+</html>

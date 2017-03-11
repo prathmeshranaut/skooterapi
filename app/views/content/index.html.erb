@@ -1,0 +1,35 @@
+<% Zone.all.each do |zone| %>
+	<%= link_to zone.name, admin_content_path(:zone_id => zone.id) %>
+<% end %>
+<hr>
+Create Skoot
+<%= form_tag admin_content_skoot_path, :method => :post, :multipart => true do %>
+	<%= hidden_field_tag :zone_id, @zone.id %>
+	"<%= @zone.name %>" Zone<br><br>
+	Category <%= select_tag :category_id, options_from_collection_for_select(Category.where(:id => ZoneCategory.where(:zone_id => @zone.id).pluck(:category_id)), :id, :name), :include_blank => true %><br><br>
+	Content <%= text_area_tag :content, nil, :placeholder => "content"%><br>
+	Image <%= file_field_tag :image %> <br><br>
+	<%= submit_tag "Create Skoot" %>
+<% end %>
+<hr>
+Create Zone<br>
+<%= form_tag admin_content_zone_path, :method => :post do %> 
+	<% if params[:zone_id].present? %>
+		<%= hidden_field_tag :id, @zone.id %>
+	<% end %>
+	Zone Name <%= text_field_tag :name, @zone.name, :placeholder => "name"%><br><br>
+	Lat Min <%= text_field_tag :lat_min, @zone.lat_min, :placeholder => "lat_min"%><br><br>
+	Lat Max <%= text_field_tag :lat_max, @zone.lat_max, :placeholder => "lat_max"%><br><br>
+	Lng Min <%= text_field_tag :lng_min, @zone.lng_min, :placeholder => "long_min"%><br><br>
+	Lng Max <%= text_field_tag :lng_max, @zone.lng_max, :placeholder => "long_max"%><br><br>
+	<%= submit_tag "Create Zone" %>
+<% end %>
+<hr>
+Add Category<br>
+<%= form_tag admin_content_categories_path, :method => :post, :multipart => true  do %> 
+	<% if params[:zone_id].present? %>
+		<%= hidden_field_tag :zone_id, @zone.id %>
+	<% end %>
+	Category Name <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), :include_blank => true %><br><br>
+	<%= submit_tag "Add category" %>
+<% end %>

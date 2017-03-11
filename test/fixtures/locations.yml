@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  belongs_to: 
+  lat: 1.5
+  lng: 1.5
+  count: 1
+
+two:
+  belongs_to: 
+  lat: 1.5
+  lng: 1.5
+  count: 1

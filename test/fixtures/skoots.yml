@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  belongs_to: 
+  content: MyText
+  belongs_to: 
+  belongs_to: 
+  deleted_moderator: false
+  deleted_user: false
+  deleted_auto: false
+
+two:
+  belongs_to: 
+  content: MyText
+  belongs_to: 
+  belongs_to: 
+  deleted_moderator: false
+  deleted_user: false
+  deleted_auto: false

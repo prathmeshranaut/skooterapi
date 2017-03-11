@@ -1,0 +1,2 @@
+module SkootHelper
+end
