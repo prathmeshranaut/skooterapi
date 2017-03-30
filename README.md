@@ -1,4 +1,6 @@
-== README
+#README
+
+*PS: This is no longer maintained.*
 
 To setup the server you need to first clone the repo in your local server.
 
