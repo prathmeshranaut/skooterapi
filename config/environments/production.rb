@@ -76,14 +76,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
       :bucket => 'skooter',
-      :access_key_id => 'AKIAJKBZO43MXIRW3CQA',
-      :secret_access_key => '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',
-      :s3_host_name => 's3-ap-southeast-1.amazonaws.com'
+      :access_key_id => '',
+      :secret_access_key => '',
+      :s3_host_name => ''
     }
   }
 end

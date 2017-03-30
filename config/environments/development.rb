@@ -38,14 +38,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => 'skooter-testing',
-      :access_key_id => 'AKIAJKBZO43MXIRW3CQA',
-      :secret_access_key => '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',
-      :s3_host_name => 's3-ap-southeast-1.amazonaws.com'
+      :bucket => '',
+      :access_key_id => '',
+      :secret_access_key => '',
+      :s3_host_name => ''
     }
   }
 end
